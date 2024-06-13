@@ -53,6 +53,9 @@ const readvalue=()=>{
                         <div>
                         <a class="nav-link" href="/signup">SignUp</a>
                         </div>
+                        <div>
+                        <a class="nav-link" href="/add">AddBuses</a>
+                        </div>
                     </div>
                 </div>
             </div>
