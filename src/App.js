@@ -16,6 +16,7 @@ function App() {
      <Route path="/add" element={<Add/>}/>
      <Route path="/view" element={<View/>}/>
      <Route path="/search" element={<Search/>}/>
+     
     </Routes>
     </BrowserRouter>
   );

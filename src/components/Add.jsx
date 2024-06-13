@@ -36,6 +36,7 @@ const readvalue=()=>{
 }
   return (
     <div>
+        <center><h5>ADD BUSES</h5></center>
         <Navbar/>
         <div className="container">
             <div className="row">
