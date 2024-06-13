@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     const[data,changedata]=useState(
@@ -20,7 +21,9 @@ const readvalue=()=>{
             (response)=>{
                 console.log(response.data)
                 if (response.data.status=="success") {
-                    alert("successfully added")
+                    sessionStorage.setItem("token",response.data.token)
+                    sessionStorage.setItem("userid",response.data.userid)
+                    navigate("/add")
                 } else {
                     alert("error")
                 }
@@ -33,8 +36,12 @@ const readvalue=()=>{
         )
     
 }
+let navigate=useNavigate()
+
+
   return (
     <div>
+       <center><h5>LOGIN</h5></center>
         <div className="container">
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -52,9 +59,6 @@ const readvalue=()=>{
                         </div>
                         <div>
                         <a class="nav-link" href="/signup">SignUp</a>
-                        </div>
-                        <div>
-                        <a class="nav-link" href="/add">AddBuses</a>
                         </div>
                     </div>
                 </div>
